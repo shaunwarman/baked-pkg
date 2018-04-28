@@ -1,0 +1,27 @@
+{
+  "name": "baked-pkg",
+  "version": "0.0.1",
+  "description": "A pkg with baked in env var",
+  "main": "index.js",
+  "scripts": {
+    "pack": "pkg bin/bake.js -c package.json -o packed/bake --debug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "bake": "./bin/bake"
+  },
+  "pkg": {
+    "scripts": [
+      "index.js"
+    ],
+    "targets": [
+      "node8-linux-x64",
+      "node8-macos-x64"
+    ]
+  },
+  "author": "Shaun Warman",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^5.0.1"
+  }
+}
