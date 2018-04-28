@@ -11,6 +11,9 @@
     "bake": "./bin/bake"
   },
   "pkg": {
+    "assets": [
+      ".env"
+    ],
     "scripts": [
       "index.js"
     ],
